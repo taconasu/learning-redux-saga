@@ -16,10 +16,18 @@ export interface UpdateUserAction {
   }
 }
 
+/**
+ * redux-sagaのtakeEvery発火のためのaction
+ * このアクション自体は何もしない
+ */
 export const initializeUser = () => ({
   type: INITIALIZE_USER
 })
 
+/**
+ * UserEntityを更新するaction
+ * @param user UserEntity
+ */
 export const updateUser = (user: UserEntity): UpdateUserAction => ({
   type: UPDATE_USER,
   payload: {

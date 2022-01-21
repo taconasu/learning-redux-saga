@@ -18,6 +18,7 @@ export interface DispatchProps {
 }
 
 export const mapDispatchToProps = (dispatch: Dispatch): DispatchProps => ({
+  // App.tsxの初期描画時(useEffect)でINITIALIZE_USERをdispatchする
   initialize: () => {
     dispatch(initializeUser())
   },
