@@ -1,5 +1,3 @@
-実装した時の流れの備忘録
-
 ## 1. reducerのcombine設定を用意
 
 [src/core/reducers.ts](../src/core/reducers.ts)
@@ -63,3 +61,14 @@ ReactDOM.render(
 
 非同期処理を含むのであれば↑に加えて`sagas`や`repositories`に関数を定義していって
 完成したタスク達を`src/sagas/index.ts`でcombineしてやる
+
+それぞれのサンプル
+
+| type | file |
+|---|---|
+| action | [userAction.ts](../src/actions/userAction.ts) |
+| adapter | [appAdapter.ts](../src/adapters/appAdapter.ts) |
+| entity | [UserEntity.ts](../src/entities/UserEntity.ts) |
+| reducer | [userReducer.ts](../src/reducers/userReducer.ts) |
+| repository | [userRepository.ts](../src/repositories/userRepository.ts) |
+| saga | [index.ts](../src/sagas/User/index.ts), [User.ts](../src/sagas/User/User.ts) |

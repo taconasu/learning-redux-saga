@@ -1,12 +1,14 @@
 ## DOCS
 
+[実装した時の流れの備忘録](./setup.md)
+
 ```
 src/
 ├── actions
 │   ├── xxxAction.ts
 │   └── ...
 ├── adapters
-│   ├── [コンポーネント名]Adapters.ts
+│   ├── [コンポーネント名]Adapter.ts
 │   └── ...
 ├── core
 │   ├── reducers.ts
