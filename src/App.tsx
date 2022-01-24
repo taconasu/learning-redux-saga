@@ -10,7 +10,7 @@ export const App: React.FC<AppProps> = ({
   useEffect(() => {
     // adapterで定義した初期化関数を実行
     initialize()
-  }, [])
+  }, [initialize])
   return (
     <div className="App">
       <header className="App-header">
