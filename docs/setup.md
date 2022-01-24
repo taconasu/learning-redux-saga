@@ -53,22 +53,22 @@ ReactDOM.render(
 ## 4. あとはステートごとに好きにやる
 
 通常のredux的な使い方がしたいのであれば
-- `actions`でactionCreatorを定義して
-- `adapters`でstateやdispatcherをpropsとしてコンポーネントに受け渡す実装をして
-- `entities`でデータの実体を定義してやって
-- `reducers`でreducerを作ってreducerを作ってやって
-- `src/core/reducers.ts`にreducerをぶち込む
+以下の順序で実装していく事になるはず
+
+1. (エンティティが必要なのであれば)`entities`でデータの実体を定義してやって
+2. `actions`でactionCreatorを定義して
+3. `reducers`でreducerを作ってstateの構造も決めて
+4. `adapters`でstateやdispatcherをpropsとしてコンポーネントに受け渡す実装をして
+5. `src/core/reducers.ts`にreducerをぶち込む
 
 非同期処理を含むのであれば↑に加えて`sagas`や`repositories`に関数を定義していって
 完成したタスク達を`src/sagas/index.ts`でcombineしてやる
 
-それぞれのサンプル
-
 | type | file |
 |---|---|
-| action | [userAction.ts](../src/actions/userAction.ts) |
-| adapter | [appAdapter.ts](../src/adapters/appAdapter.ts) |
 | entity | [UserEntity.ts](../src/entities/UserEntity.ts) |
+| action | [userAction.ts](../src/actions/userAction.ts) |
 | reducer | [userReducer.ts](../src/reducers/userReducer.ts) |
+| adapter | [appAdapter.ts](../src/adapters/appAdapter.ts) |
 | repository | [userRepository.ts](../src/repositories/userRepository.ts) |
 | saga | [index.ts](../src/sagas/User/index.ts), [User.ts](../src/sagas/User/User.ts) |
