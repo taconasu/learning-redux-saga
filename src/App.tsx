@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { AppProps } from './adapters/appAdapters';
+import { AppProps } from './adapters/appAdapter';
 
 export const App: React.FC<AppProps> = ({
   user: { data },

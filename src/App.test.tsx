@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { store } from './core/store';
-import App from './adapters/appAdapters';
+import App from './adapters/appAdapter';
 
 test('renders learn react link', () => {
   const { getByText } = render(
